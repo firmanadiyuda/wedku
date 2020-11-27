@@ -1,3 +1,3 @@
-@props(['disabled' => false])
+@props(['required' => false, 'autofocus' => false, 'disabled' => false])
 
-<input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => 'form-input rounded-md shadow-sm']) !!}>
+<input {{ $autofocus ? 'autofocus' : '' }} {{ $disabled ? 'disabled' : '' }} {{ $required ? 'required' : '' }} {!! $attributes->merge(['class' => '']) !!} style="z-index: 1" placeholder=" ">
