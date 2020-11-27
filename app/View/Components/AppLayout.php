@@ -6,6 +6,16 @@ use Illuminate\View\Component;
 
 class AppLayout extends Component
 {
+
+    public $footer;
+    public $navbar;
+
+    public function __construct($footer, $navbar)
+    {
+        $this->navbar = $navbar;
+        $this->footer = $footer;
+    }
+
     /**
      * Get the view / contents that represents the component.
      *
