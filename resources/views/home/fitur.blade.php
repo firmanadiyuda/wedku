@@ -1,13 +1,12 @@
 <div class="grid grid-cols-12 gap-x-5 gap-y-10 px-10 md:px-10 lg:px-24 text-center font-montserrat">
 
-    <div class="relative col-span-12 mx-auto" style="z-index: 0">
+    <div class="reveal relative col-span-12 mx-auto" style="z-index: 0">
         <div class="pb-10 text text-center md:text-left text-6xl font-thin md:text-6xl lg:text-6xl lg:text-1xl tracking-widest hover:text-primary-500 dark-hover:text-primary-500 transform hover:-translate-y-5">
-            FITUR
-            <hr>
+            FITUR <hr>
         </div>
     </div>
     
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -23,7 +22,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -39,7 +38,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -55,7 +54,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -71,7 +70,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -87,7 +86,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -103,7 +102,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>
@@ -119,7 +118,7 @@
         </div>
     </div>
 
-    <div class="col-span-6 sm:col-span-3">
+    <div class="reveal col-span-6 sm:col-span-3">
         <div class="card hover:bg-primary-600 hover:text-gray-100 dark-hover:bg-primary-700 h-full md:w-50 mx-auto tracking-widest font-medium text tooltip transform hover:-translate-y-5">
             <div class="bottom">
                 <p class="text-center">Dolor sit amet, consectetur adipiscing elit.</p>

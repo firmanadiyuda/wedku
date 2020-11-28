@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data :class="{ 'mode-dark': $store.theme.isDarkMode }">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="turbolinks-cache-control" content="no-preview">
 
     <title>{{ config('app.name') }}</title>
 
@@ -32,8 +34,9 @@
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer data-turbolinks-eval="false" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/spruce@2.x.x/dist/spruce.umd.js" data-turbolinks-eval="false"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous" data-turbolinks-eval="false"></script>
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
+    <script src="https://unpkg.com/scrollreveal" data-turbolinks-eval="false"></script>
     <script src="{{ asset('js/app.js') }}" data-turbolinks-eval="false"></script>
     {{-- /* -------------------------------------------------------------------------- */ --}}
 
@@ -45,30 +48,40 @@
 
         {{-- /* --------------------------------- Navbar --------------------------------- */ --}}
         @if($navbar == "on")
-        {{-- @include('navbar.navbar') --}}
-        <x-navbar.navbar></x-navbar>
-        @endif
-        {{-- /* -------------------------------------------------------------------------- */ --}}
-
-
-        {{-- /* ------------------------------ Page Content ------------------------------ */ --}}
-        <main>
-            {{ $slot }}
-        </main>
-        {{-- /* -------------------------------------------------------------------------- */ --}}
-
-
-        {{-- /* --------------------------------- Footer --------------------------------- */ --}}
-        <footer>
-            @if($footer == "on")
-            @include('footer')
+        <x-navbar.navbar>
+            </x-navbar>
             @endif
-        </footer>
-        {{-- /* -------------------------------------------------------------------------- */ --}}
+            {{-- /* -------------------------------------------------------------------------- */ --}}
+
+
+            {{-- /* ------------------------------ Page Content ------------------------------ */ --}}
+            <main>
+                {{ $slot }}
+            </main>
+            {{-- /* -------------------------------------------------------------------------- */ --}}
+
+
+            {{-- /* --------------------------------- Footer --------------------------------- */ --}}
+            <footer>
+                @if($footer == "on")
+                @include('footer')
+                @endif
+            </footer>
+            {{-- /* -------------------------------------------------------------------------- */ --}}
 
     </div>
     @stack('modals')
-    <livewire:toast />
+    <script>
+        ScrollReveal().reveal('.reveal', {
+            reset: true
+            , duration: 1000
+            , delay: 100
+            , distance: '50px'
+            , interval: 100
+        })
 
+    </script>
+    <livewire:toast />
 </body>
+
 </html>

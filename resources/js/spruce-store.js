@@ -2,10 +2,14 @@
 /*                                    TOAST                                   */
 /* -------------------------------------------------------------------------- */
 
+const {
+    remove
+} = require("lodash");
+
 Spruce.store('toast', {
     id: 0,
     toasts: {},
-    add(type, title, message, duration) {
+    add(type, title, message, duration = 5000) {
         switch (type) {
             case 'success':
                 type = 'border-green-500';
@@ -42,6 +46,7 @@ Spruce.store('toast', {
 
         setTimeout(function () {
             Spruce.store('toast').toasts[current_id]['show'] = false;
+            delete this.toasts[current_id];
         }, duration);
 
         this.id++;
@@ -49,13 +54,7 @@ Spruce.store('toast', {
 
     close(id) {
         Spruce.store('toast').toasts[id]['show'] = false;
-        this.remove(id);
-    },
-
-    remove(id) {
-        setTimeout(function () {
-            delete this.toasts[id]
-        }, 2000);
+        delete this.toasts[current_id];
     }
 })
 

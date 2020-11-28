@@ -19345,6 +19345,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./spruce-store */ "./resources/js/spruce-store.js");
 
+__webpack_require__(/*! ./toast */ "./resources/js/toast.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19384,17 +19386,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   !*** ./resources/js/spruce-store.js ***!
   \**************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 /* -------------------------------------------------------------------------- */
 
 /*                                    TOAST                                   */
 
 /* -------------------------------------------------------------------------- */
+var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
+    remove = _require.remove;
+
 Spruce.store('toast', {
   id: 0,
   toasts: {},
-  add: function add(type, title, message, duration) {
+  add: function add(type, title, message) {
+    var duration = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5000;
+
     switch (type) {
       case 'success':
         type = 'border-green-500';
@@ -19433,17 +19440,13 @@ Spruce.store('toast', {
     var current_id = this.id;
     setTimeout(function () {
       Spruce.store('toast').toasts[current_id]['show'] = false;
+      delete this.toasts[current_id];
     }, duration);
     this.id++;
   },
   close: function close(id) {
     Spruce.store('toast').toasts[id]['show'] = false;
-    this.remove(id);
-  },
-  remove: function remove(id) {
-    setTimeout(function () {
-      delete this.toasts[id];
-    }, 2000);
+    delete this.toasts[current_id];
   }
 });
 /* -------------------------------------------------------------------------- */
@@ -19466,6 +19469,19 @@ Spruce.store('theme', {
     }
   }
 }, true);
+
+/***/ }),
+
+/***/ "./resources/js/toast.js":
+/*!*******************************!*\
+  !*** ./resources/js/toast.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.livewire.on('toast', function (data) {
+  Spruce.store('toast').add(data['type'], data['title'], data['message'], data['duration']);
+});
 
 /***/ }),
 
