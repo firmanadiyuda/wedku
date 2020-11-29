@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     {{-- /* -------------------------------------------------------------------------- */ --}}
 
 
@@ -36,52 +37,44 @@
     <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/spruce@2.x.x/dist/spruce.umd.js" data-turbolinks-eval="false"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous" data-turbolinks-eval="false"></script>
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
-    <script src="https://unpkg.com/scrollreveal" data-turbolinks-eval="false"></script>
-    <script src="{{ asset('js/app.js') }}" data-turbolinks-eval="false"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     {{-- /* -------------------------------------------------------------------------- */ --}}
 
 
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-comfortaa text-sm antialiased">
     <div class=" min-h-screen pt-0 transition duration-500 ease-in-out bg text-black dark:text-white z-0">
 
         {{-- /* --------------------------------- Navbar --------------------------------- */ --}}
         @if($navbar == "on")
-        <x-navbar.navbar>
-            </x-navbar>
+        <x-navbar.navbar />
+        @endif
+        {{-- /* -------------------------------------------------------------------------- */ --}}
+
+
+        {{-- /* ------------------------------ Page Content ------------------------------ */ --}}
+        <main>
+            {{ $slot }}
+        </main>
+        {{-- /* -------------------------------------------------------------------------- */ --}}
+
+
+        {{-- /* --------------------------------- Footer --------------------------------- */ --}}
+        <footer>
+            @if($footer == "on")
+            @include('footer')
             @endif
-            {{-- /* -------------------------------------------------------------------------- */ --}}
-
-
-            {{-- /* ------------------------------ Page Content ------------------------------ */ --}}
-            <main>
-                {{ $slot }}
-            </main>
-            {{-- /* -------------------------------------------------------------------------- */ --}}
-
-
-            {{-- /* --------------------------------- Footer --------------------------------- */ --}}
-            <footer>
-                @if($footer == "on")
-                @include('footer')
-                @endif
-            </footer>
-            {{-- /* -------------------------------------------------------------------------- */ --}}
+        </footer>
+        {{-- /* -------------------------------------------------------------------------- */ --}}
 
     </div>
     @stack('modals')
-    <script>
-        ScrollReveal().reveal('.reveal', {
-            reset: true
-            , duration: 1000
-            , delay: 100
-            , distance: '50px'
-            , interval: 100
-        })
 
-    </script>
     <livewire:toast />
+    <script src="{{ asset('js/scroll-reveal.js') }}" data-turbolinks-eval="true"></script>
+
 </body>
 
 </html>

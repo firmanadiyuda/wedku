@@ -5,18 +5,18 @@
         <section>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-y-16 px-10 md:px-10 lg:px-24">
 
-                <div class="relative reveal">
+                <div class="relative reveal-fade-right">
                     <div class="text-white text-center md:text-left text-6xl font-pacifico md:text-6xl lg:text-6xl lg:text-1xl ">
                         {{ env('APP_NAME') }}.id
                     </div>
 
-                    <div class="reveal text-white font-montserrat font-medium text-center md:text-left font-reguler text-1xl md:text-1xl lg:text-1xl lg:text-1xl">
+                    <div class="reveal-fade-up text-white font-medium text-center md:text-left font-reguler text-lg">
                         Platform Undangan Digital Instan<br>
                     </div>
                 </div>
 
 
-                <div class="reveal">
+                <div class="reveal-fade-up">
                     <x-card>
                         <form action="creator">
                             @csrf
@@ -36,7 +36,7 @@
                     </x-card>
                 </div>
 
-                <div class="reveal relative text-left -mt-24 md:-ml-20 lg:-ml-20 md:-mt-48 lg:-mt-56">
+                <div class="reveal-fade-up relative text-left -mt-24 md:-ml-20 lg:-ml-20 md:-mt-48 lg:-mt-56">
                     <img class="absolute text-left transform scale-90 md:scale-100" src="{{asset('assets/images/undraw_wedding_t1yl.svg')}}" alt="">
                 </div>
 
@@ -50,7 +50,7 @@
 
 
         <section id="fitur" class="bg pt-15 pb-60">
-            @include('home.fitur')
+            @include('components.home.fitur')
         </section>
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="fill-current bg-svg">
@@ -58,15 +58,15 @@
         </svg>
 
         <section id="harga" class=" -mt-96">
-            @include('home.harga')
+            @include('components.home.harga')
         </section>
 
         <svg xmlns="http://www.w3.org/2000/svg" class="fill-current bg-svg sm:-mt-10 md:-mt-10 lg:-mt-28" viewBox="0 0 1440 320">
             <path fill-opacity="1" d="M0,32L48,58.7C96,85,192,139,288,186.7C384,235,480,277,576,266.7C672,256,768,192,864,144C960,96,1056,64,1152,90.7C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
 
-        <section id="faq" class="bg pt-15">
-            @include('home.faq')
+        <section id="tema" class="bg pt-15">
+            @include('components.home.tema')
         </section>
 
     </div>

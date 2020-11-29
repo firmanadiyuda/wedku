@@ -14,16 +14,16 @@
                             <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    
+
                 </div>
 
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
 
-                    
+
                     <x-navbar.nav-item name="Beranda" href="#home" data-turbolinks="false" />
                     <x-navbar.nav-item name="Fitur" href="#fitur" data-turbolinks="false" />
                     <x-navbar.nav-item name="Harga" href="#harga" data-turbolinks="false" />
-                    <x-navbar.nav-item name="FAQ" href="#faq" data-turbolinks="false" />
+                    <x-navbar.nav-item name="Tema" href="#tema" data-turbolinks="false" />
                     <a class="px-4 py-2 mt-2 md:mr-3 text-sm text-white font-semibold bg-primary-500 rounded-lg dark:bg-primary-500 dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-100 hover:bg-primary-400 dark-hover:bg-primary-400 focus:outline-none transition duration-200 ease-in-out" href="/login">Login &nbsp; <i class="ri-login-box-line align-middle"></i></a>
 
                     <x-btn-theme />

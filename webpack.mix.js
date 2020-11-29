@@ -17,3 +17,5 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     .webpackConfig(require('./webpack.config'));
+
+    mix.js('resources/js/scroll-reveal.js', 'public/js').webpackConfig(require('./webpack.config'));

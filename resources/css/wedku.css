@@ -12,6 +12,10 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
+.turbolinks-progress-bar {
+  @apply bg-blue-300 h-1 shadow-2xl;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -60,49 +64,11 @@ body {
   @apply text-gray-900;
 }
 
-input {
-  @apply relative bg-transparent w-full py-4 px-3 leading-normal rounded-md border border-gray-300 text-gray-900 transition duration-300 ease-in-out;
-}
+/* -------------------------------------------------------------------------- */
 
-input:hover {
-  @apply shadow-lg;
-}
 
-input:focus {
-  @apply outline-none shadow-outline-indigo border-primary-500;
-}
 
-.mode-dark input {
-  @apply text-white border-gray-600;
-}
-
-input::placeholder {
-  @apply opacity-0;
-}
-
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.9) inset; /* Change the color to your own background color */
-  -webkit-text-fill-color: #333;
-}
-
-.mode-dark input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 50px rgba(91, 103, 121, 1) inset; /* Change the color to your own background color */
-  -webkit-text-fill-color: #eee;
-}
-
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.9) inset; /* Change the color to your own background color */
-  -webkit-text-fill-color: #333;
-}
-
-.mode-dark input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 50px rgba(91, 103, 121, 1) inset; /* Change the color to your own background color */
-  -webkit-text-fill-color: #eee;
-}
-
-.form-label {
-  @apply absolute block top-2 w-full px-3 py-2 leading-normal z-0 text-gray-400 transition-all duration-200 ease-in-out;
-}
+/* -------------------------------- Checkbox -------------------------------- */
 
 .wedku-checkbox:checked {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
@@ -163,6 +129,11 @@ input:-webkit-autofill:focus {
 .wedku-checkbox:checked:focus {
   border-color: transparent;
 }
+/* -------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------- Form Group ------------------------------- */
 
 .label-floating input:not(:placeholder-shown) {
   @apply pt-6 pb-2;
@@ -179,12 +150,72 @@ input:-webkit-autofill:focus {
 }
 
 .form-group {
-  @apply relative appearance-none bg-white rounded-md my-4 transition-all duration-500 ease-in-out;
+  @apply relative appearance-none bg-white rounded-md my-4 transition duration-500 ease-in-out;
 }
 
 .mode-dark .form-group {
   @apply bg-gray-600;
 }
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------- Input --------------------------------- */
+
+input {
+  @apply relative bg-transparent w-full py-4 px-3 leading-normal rounded-md border border-gray-300 text-gray-900 transition duration-300 ease-in-out;
+}
+
+input:hover {
+  @apply shadow-lg;
+}
+
+input:focus {
+  @apply outline-none shadow-outline-indigo border-primary-500;
+}
+
+.mode-dark input {
+  @apply text-white border-gray-600;
+}
+
+input::placeholder {
+  @apply opacity-0;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.9) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
+}
+
+.mode-dark input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px rgba(91, 103, 121, 1) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #eee;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.9) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
+}
+
+.mode-dark input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px rgba(91, 103, 121, 1) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #eee;
+}
+
+.form-label {
+  @apply absolute block top-2 w-full px-3 py-2 leading-normal z-0 text-gray-400 transition-all duration-200 ease-in-out;
+}
+
+.input-error {
+  @apply outline-none shadow-outline-red border-red-500;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------- Card ---------------------------------- */
 
 .card {
   @apply bg-gray-200 rounded-lg p-5 shadow-xl border border-gray-300 transition-all duration-500 ease-in-out;
@@ -194,7 +225,12 @@ input:-webkit-autofill:focus {
   @apply bg-gray-700 border border-gray-600;
 }
 
-/* BUTTON */
+/* -------------------------------------------------------------------------- */
+
+
+
+/* --------------------------------- Button --------------------------------- */
+
 .btn {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -217,16 +253,32 @@ button:focus {
   @apply transform -translate-y-0.5;
 }
 
+/* -------------------------------------------------------------------------- */
+
+
+
+.a-link {
+  @apply inline-block text-primary-500 transform transition-all duration-200 ease-in-out;
+}
+
+.a-link:hover {
+  @apply text-primary-400 -translate-y-1 underline;
+}
+
+.a-link:focus {
+  @apply text-primary-600 underline;
+}
+
 .a-right {
-  @apply transition duration-200 ease-in-out;
+  @apply inline-block transform transition-all duration-200 ease-in-out;
 }
 
 .a-right:hover {
-  @apply transform translate-x-1;
+  @apply translate-x-1;
 }
 
 .a-right:focus {
-  @apply transform -translate-x-1;
+  @apply -translate-x-1;
 }
 
 .tooltip {

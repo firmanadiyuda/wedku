@@ -13,6 +13,7 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 pacifico: ['"Pacifico"'],
                 montserrat: ['"Montserrat"'],
+                comfortaa: ['"Comfortaa"'],
             },
             colors: {
                 primary: defaultTheme.colors.indigo,

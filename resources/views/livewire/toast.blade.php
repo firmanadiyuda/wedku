@@ -7,18 +7,19 @@
                     <div class="pr-2">
                         <i :class="value.icon" class=" text-lg"></i>
                     </div>
-                    <div>
+                    <div class="relative w-full">
                         <div class="text-sm text pb-2 font-bold">
                             <span x-text="value.title"></span>
 
-                            <span class="absolute ml-48">
+                            {{-- /* ------------------------------ Tombol Close ------------------------------ */ --}}
+                            <span class="absolute right-0">
                                 <button @click="$store.toast.close(id)">
                                     <i class="ri-close-line fill-current text-red-500"></i>
                                 </button>
                             </span>
-
+                            {{-- /* -------------------------------------------------------------------------- */ --}}
                         </div>
-                        <div class="text-sm text  tracking-tight ">
+                        <div class="text-sm text tracking-tight5">
                             <span x-text="value.message"></span>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ class Home extends Component
 {
     public function show()
     {
-        $this->emit('toast', ['type'=>'info', 'title'=>'judul', 'message'=>'s']);
+        $this->emit('toast', ['type'=>'info', 'title'=>'Login Gagal', 'message'=>'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad explicabo ipsum, accusantium exercitationem dolores laborum dicta itaque nisi deleniti illo nam, excepturi quod tenetur nostrum optio veniam nemo cupiditate!']);
     }
 
     public function render()

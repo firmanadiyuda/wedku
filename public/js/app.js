@@ -19347,6 +19347,8 @@ __webpack_require__(/*! ./spruce-store */ "./resources/js/spruce-store.js");
 
 __webpack_require__(/*! ./toast */ "./resources/js/toast.js");
 
+Turbolinks.setProgressBarDelay(100);
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19479,8 +19481,8 @@ Spruce.store('theme', {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-window.livewire.on('toast', function (data) {
-  Spruce.store('toast').add(data['type'], data['title'], data['message'], data['duration']);
+window.addEventListener('toast', function (event) {
+  Spruce.store('toast').add(event.detail['type'], event.detail['title'], event.detail['message'], event.detail['duration']);
 });
 
 /***/ }),
